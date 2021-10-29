@@ -14,16 +14,25 @@ set relativenumber
 set laststatus=2
 set noshowmode
 
+" Plugins
+
 call plug#begin('~/.vim/plugged')
 
-" Temas
-
+Plug 'frazrepo/vim-rainbow'
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 Plug 'morhetz/gruvbox'
 Plug 'easymotion/vim-easymotion'
 Plug 'scrooloose/nerdtree'
 
 call plug#end()
 
+" airline
+
+let g:airline_theme='bubblegum'
+let g:airline#extensions#tabline#enabled = 1
+
+let g:rainbow_active = 1
 colorscheme gruvbox
 let g:gruvbox_constrast_dark = "hard"
 let NERDTreeQuitOnOpen=1
@@ -31,6 +40,7 @@ let NERDTreeQuitOnOpen=1
 let mapleader=" "
 nmap <Leader>s <Plug>(easymotion-s2)
 nmap <leader>nt :NERDTreeFind<CR>
+
 
 
 
